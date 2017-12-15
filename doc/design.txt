@@ -1,0 +1,14 @@
+Fling File Transfer Protocol
+============================
+
+On copy:
+  - Mark file as copied.
+  - Mark timestamp when copied.
+
+On paste:
+  - Paster sends UDP broadcast: "who has copy?"
+  - All copiers respond with UDP broadcast: "I have copy" and the
+    amount of time that has passed since the last time the file was
+    copied.
+  - Paster opens TCP connection to newest copier, and copier sends to
+    paster.
